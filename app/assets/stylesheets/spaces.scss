@@ -1,11 +1,18 @@
 // Place all the styles related to the spaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-// .index_cards {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.index_header{
+  font-size: 64px;
+  font-weight: bold;
+}
 
+.index_cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
+  background-color: #FFDD86;
+  align-items: centre;
+}
 
 .index_card {
   width: 217px;
