@@ -11,7 +11,23 @@
   </div>
   <div class="index_cards">
     <% @spaces.each do |space| %>
-      <%= space.name %>
+      <div class="index_card">
+        <div class="space_category">
+          <%= space.category %>
+        </div>
+        <div class="space_name">
+          <%= space.name %>
+        </div>
+         <div class="space_address">
+          <%= space.address %>
+        </div>
+        <div class="view_cta">
+          <p>View</p>
+        </div>
+        <div class="card_rating">
+          * 4.7
+        </div>
+      </div>
     <% end %>
   </div>
   <div class="map">
