@@ -1,43 +1,26 @@
 <head>
-
 </head>
 
-
-
-<div class="filters">
-Search bar ---- Type -- Rating
-</div>
-
-
-<div class="space_cards">
-  Squares
-   Squares
-    Squares
-     Squares
-      Squares
-</div>
-
-
-<div class="map">
--
--
--
--
--
--
--
--
-
-</div>
-
-
-<div class="space_cta">
-  -
-  -
-  -
-
-</div>
-
+<body>
+  <!-- render nav bar -->
+  <div class="index_header">
+    Choose a space
+  </div>
+  <div class="index_filters">
+    London ----- Rating -- Type
+  </div>
+  <div class="index_cards">
+    <% @spaces.each do |space| %>
+      <%= space.name %>
+    <% end %>
+  </div>
+  <div class="map">
+    ---------
+  </div>
+  <div class="space_cta">
+    ------
+  </div>
+</body>
 
 <footer>
 
