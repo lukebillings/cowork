@@ -11,7 +11,8 @@
   flex-wrap: wrap;
   max-width: 520px;
   background-color: #FFDD86;
-  align-items: centre;
+  justify-content: center;
+  align-items: center
 }
 
 .index_card {
@@ -19,7 +20,7 @@
   height: 196px;
   color: white;
   background-color: #1E6069;
-  margin: 20px;
+  margin: 20px 20px;
   border-radius: 8px;
   position: relative;
     .space_category {
