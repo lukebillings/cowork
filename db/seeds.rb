@@ -5,46 +5,40 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+Space.destroy_all
 
-file_array = []
-50.times do
-  file_array << "https://source.unsplash.com/random?sig=#{rand(1..50)}/&coffee-shop-work"
-end
+name_array = [
+  "Crema Coffee House",
+  "Honor Coffee and Tea",
+  "Queen Anne Coffee",
+  "Little Owl Coffee",
+  "Spiced Chai Cafe",
+  "Torpedo Coffee",
+  "Beans ‘n Cream Cafe",
+  "Jumpin’ Beans Cafe",
+  "The Coffee Club",
+  "Manhattan Mocha",
+  "The Grind",
+  "The Split Bean",
+  "Screamin’ Beans",
+  "Steamin’ Mugs",
+  "Hugs with Mugs",
+  "Molten Cream Jars",
+  "Stylish Kafe",
+  "Candle Cafe",
+  "Sip and Snack",
+  "Impresso Espresso"
+]
 
-name_array = %w(Pine Tree
-  Hot Grind
-  Palm Tree Coffee
-  Grind Jar
-  Grind Bay
-  Fusion Grind
-  Grind Valley
-  North Grind
-  Grind Trail
-  Grind Vibe
-  Town Roasters
-  Grind Wolf
-  Skyscraper Café
-  Grind North
-  Hangout Coffee
-  Coffee Roasters
-  City Pour
-  Forest Beans
-  Hotspring Café
-  Dreamy Moose
-  Sunsets Café
-  Mugs and Spoon
-  Latte Loca)
 category_array = ["Coffee Shop", "Library", "Museum"]
 description_array = ["Great place to get work done. Grab a coffee and take a seat. Artisan coffee starts at £2.99!", "Make yourself at home in our venue. With a wide selection of brunch and lunch options you can get work done as well as delight your taste buds", "Meet other freelancers in our cafe"]
 address_array = ["Paddington, London", "Shoreditch, London", "Angel, London", "Waterloo, London", "Buckingham Palace, London", "South Kensington, London"]
 
-50.times do
+20.times do
   space = Space.new(name: name_array.sample,
     category: category_array.sample,
     description: description_array.sample,
     address: address_array.sample,
     link: "spacename.com" )
-  # space.photos.attach(io: URI.open(file_array.sample), filename: 'nes.png', content_type: 'image/png')
   space.save!
 end
