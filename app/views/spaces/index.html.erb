@@ -9,31 +9,46 @@
   <div class="index_filters">
     London ----- Rating -- Type
   </div>
-  <div class="index_cards">
-    <% @spaces.each do |space| %>
-      <div class="index_card">
-        <div class="space_category">
-          <%= space.category %>
+
+  <div class="index-container">
+    <div class="d-flex justify-content-between">
+
+
+    <div class="index_cards">
+      <% @spaces.each do |space| %>
+        <div class="index_card">
+          <div class="space_category">
+            <%= space.category %>
+          </div>
+          <div class="space_name">
+            <%= space.name %>
+          </div>
+           <div class="space_address">
+            <%= space.address %>
+          </div>
+          <div class="view_cta">
+            <p>View</p>
+          </div>
+          <div class="card_rating">
+            * 4.7
+          </div>
         </div>
-        <div class="space_name">
-          <%= space.name %>
-        </div>
-         <div class="space_address">
-          <%= space.address %>
-        </div>
-        <div class="view_cta">
-          <p>View</p>
-        </div>
-        <div class="card_rating">
-          * 4.7
-        </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+
 <div id="map"
-     style="width: 100%; height: 600px;"
+     style="width: 80vw; height: 100vh; position: sticky; top: 0;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+  </div>
+</div>
+
+
+
+
+
   <div class="space_cta">
     ------
   </div>
