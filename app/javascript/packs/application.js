@@ -8,6 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// internal imports
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'geocoder'
+
+gem 'bootstrap', '~> 4.4.1'
+
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
@@ -27,6 +33,11 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+
+group :test, :development do
+      gem 'dotenv-rails'
+  end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
