@@ -1,61 +1,18 @@
 // Place all the styles related to the spaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.index-container {
- margin: 0 30px 30px 30px;
-}
 
-.index_header{
-  font-size: 64px;
-  font-weight: bold;
-}
-
-.index_cards {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 520px;
-  background-color: #FFDD86;
-  justify-content: center;
-  align-items: center
-}
+// .index_cards {
+//   max-width: 520px;
+// }
 
 .index_card {
   width: 217px;
   height: 196px;
-  color: white;
-  background-color: #1E6069;
-  margin: 20px 20px;
-  border-radius: 8px;
   position: relative;
-    .space_category {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: white;
-      color: #1E6069;
-      border-radius: 8px;
-      padding: 2px 8px 1px 8px;
-    }
-    .space_name {
-      position: absolute;
-      top: 49px;
-      left: 20px;
-      font-weight: bold;
-    }
-    .space_address {
-      position: absolute;
-      top: 81px;
-      left: 20px;
-    }
     .view_cta {
-      position: absolute;
-      bottom: 15px;
-      left: 20px;
-      border-style: solid;
-      border-radius: 4px;
       width: 75px;
       height: 44px;
-      text-align: center;
     }
     .card_rating {
       position: absolute;
