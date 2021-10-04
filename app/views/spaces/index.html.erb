@@ -1,12 +1,12 @@
 <body class="bg-gray-200 m-14">
   <!-- render nav bar -->
-  <div class="text-6xl font-bold text-green-">
-    Choose a space
+  <div class="text-6xl font-bold text-gray-700">
+    Choose a space...
   </div>
   <div class="index_filters inline-block mt-14">
         <a class="px-5 py-3 bg-green-700 hover:bg-green-500 transition text-white rounded-lg shadow-lg uppercase tracking-wider font-semibold text-sm hover:no-underline" href="">Search Locations</a>
-       <a class="px-5 py-3 bg-green-700 hover:bg-green-500 transition text-white rounded-lg shadow-lg uppercase tracking-wider font-semibold text-sm hover:no-underline" href="">Rating</a>
-       <a class="px-5 py-3 bg-green-700 hover:bg-green-500 transition text-white rounded-lg shadow-lg uppercase tracking-wider font-semibold text-sm hover:no-underline" href="">Type</a>
+       <a class="px-5 py-3 bg-green-700 hover:bg-green-500 transition text-white rounded-lg shadow-lg uppercase tracking-wider font-semibold text-sm hover:no-underline" href="">Rating ^</a>
+       <a class="px-5 py-3 bg-green-700 hover:bg-green-500 transition text-white rounded-lg shadow-lg uppercase tracking-wider font-semibold text-sm hover:no-underline" href="">Type [ ]</a>
   </div>
 
   <div class="index-container mt-10">
@@ -25,7 +25,7 @@
            <div class="space_address absolute top-20 left-6 pr-2 mt-2">
             <%= space.address %>
           </div>
-          <div class="view_cta absolute bottom-4 left-6 border-2 border-white-800 border-opacity-20 text-center rounded-2xl p-2">
+          <div class="view_cta absolute bottom-4 left-6 border-2 border-white-800 border-opacity-20 text-center rounded-2xl p-2 hover:border-white">
             <p>View</p>
           </div>
           <div class="card_rating">
@@ -35,7 +35,7 @@
       <% end %>
     </div>
 
-<div class="hidden md:block" id="map"
+<div class="hidden lg:block" id="map"
      style="width: 80vw; height: 100vh; position: sticky; top: 0;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
