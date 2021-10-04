@@ -8,6 +8,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import "stylesheets/application"
+
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
 
