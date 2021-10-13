@@ -1,9 +1,9 @@
 class SpacesController < ApplicationController
   def index
     if params[:address].present?
-      @spaces = Space.near(params[:address], 1)
+      @spaces = Space.near(params[:address], 5)
     else
-      @spaces = Space.none
+      @spaces = Space.all
     end
     @markers = @spaces.geocoded.map do |space|
       {
