@@ -10,5 +10,12 @@
     </div>
   <%= image_tag("working.jpg", :alt => "person working", class: "object-scale-down h-50 w-50 mt-20 rounded-lg shadow-xl hidden sm:block") %>
   </div>
+  <%= form_tag spaces_path, method: :get do %>
+    <%= text_field_tag :address,
+      params[:address],
+      class: "form-control",
+      placeholder: "Find a movie"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
 </body>
-
